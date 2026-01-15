@@ -1,0 +1,30 @@
+{% stylesheet %}
+  .test-section {
+    padding: 2rem;
+    text-align: center;
+  }
+{% endstylesheet %}
+
+<div class="custom-heading">
+  <h2>{{ section.settings.heading_text }}</h2>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Heading",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text",
+        "default": "Default Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Heading",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
