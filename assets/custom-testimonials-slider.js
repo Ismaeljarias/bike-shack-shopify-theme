@@ -7,3 +7,15 @@
 // infinite loop
 // the slides or cells should be aligned to the left side on initialization.
 // pauseAutoPlayOnHover: false
+const carouseks = document.querySelectorAll(".testimonial-slider");
+  carouseks.forEach((carousel) => {
+    let autoplay = Number(carousel.dataset.autoplay);
+    new Flickity(carousel, {
+    pageDots: false,
+    wrapAround: true,
+    autoPlay: autoplay,
+    cellAlign: 'center',
+    pauseAutoPlayOnHover: false,
+    // fullscreen: true,
+  });
+});
