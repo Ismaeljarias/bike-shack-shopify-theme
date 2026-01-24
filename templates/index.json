@@ -9,14 +9,6 @@
  */
 {
   "sections": {
-    "countdown_WTAAYD": {
-      "type": "countdown",
-      "name": "Countdown",
-      "settings": {
-        "text": "Spring Sale! Save up to 20%",
-        "final_date": "Jan 25, 2026 16:37:52 EST"
-      }
-    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -63,6 +55,14 @@
         "mobile_content_alignment": "left",
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "countdown_WTAAYD": {
+      "type": "countdown",
+      "name": "Countdown",
+      "settings": {
+        "text": "Spring Sale! Save up to 20%",
+        "final_date": "Jan 25, 2026 16:37:52 EST"
       }
     },
     "featured_collection": {
@@ -428,8 +428,8 @@
     }
   },
   "order": [
-    "countdown_WTAAYD",
     "image-with-text",
+    "countdown_WTAAYD",
     "featured_collection",
     "image_with_text_7GrjRn",
     "image_with_text_e7KBW4",
