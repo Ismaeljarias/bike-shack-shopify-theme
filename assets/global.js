@@ -1131,6 +1131,12 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      
+      const variantChangeEvent = new CustomEvent("afterVariantChange", {
+        detail: { newVariant: this.currentVariant },
+        bubbles: true,
+      });
+      this.dispatchEvent(variantChangeEvent);
     }
   
   }
