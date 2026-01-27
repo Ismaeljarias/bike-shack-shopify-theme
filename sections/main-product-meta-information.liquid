@@ -290,7 +290,6 @@
 
                 <script>
                   const variantMetaData = JSON.parse(document.querySelector('#variant_meta_information').innerHTML);
-                  console.log("parsed variantMetaData", variantMetaData)
 
                   const weightTxt = document.querySelector('#meta-information-weight');
                   const rangeTxt = document.querySelector('#meta-information-range');
@@ -299,12 +298,19 @@
                   const breaksTxt = document.querySelector('#meta-information-breaks');
 
                   function updateUI(variantOption) {
-
+                    const variantData = variantMetaData[variantOption];
+                    weightTxt.innerText = variantData.weight;
+                    rangeTxt.innerText = variantData.range;
+                    speedTxt.innerText = variantData.speed;
+                    batteryTxt.innerText = variantData.battery;
+                    breaksTxt.innerText = variantData.breaks;
                   }
                   //subscribe to variant changes and update UI based on new selection
-                  //...
-
-
+                  document.addEventListener('afterVariantChange', (event) => {
+                    const selectedVariant = event.detail.selectedVariant;
+                    const selectedOption1 = selectedVariant.option1;
+                    updateUI(selectedOption1);
+                  });
 
                   //initialize on pageload
                   const initialVariantOption = document.querySelector('#meta-information-table').dataset.initialvariantoption;
