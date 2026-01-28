@@ -307,8 +307,8 @@
                   }
                   //subscribe to variant changes and update UI based on new selection
                   document.addEventListener('afterVariantChange', (event) => {
-                    const selectedVariant = event.detail.selectedVariant;
-                    const selectedOption1 = selectedVariant.option1;
+                    const newVariant = event.detail.newVariant;
+                    const selectedOption1 = newVariant.option1;
                     updateUI(selectedOption1);
                   });
 
