@@ -1134,7 +1134,7 @@ class VariantSelects extends HTMLElement {
       
 
       const variantChangeEvent = new CustomEvent("afterVariantChange", {
-        detail: { selectedVariant: this.currentVariant },
+        detail: { newVariant: this.currentVariant },
         bubbles: true,
       });
       this.dispatchEvent(variantChangeEvent);
