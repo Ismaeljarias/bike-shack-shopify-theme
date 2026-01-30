@@ -17,11 +17,11 @@ Replace all hardcoded values with dynamic values from the product object
   </div>
   <img src="{{ product.featured_image | image_url: width: 200 }}" alt="{{ product.title }}" width="auto" height="auto" />
   <p>Price: {{ product.price | money }}</p>
-  <p>Rating: {{ product.metafields.custom.rating | default: 'N/A' }} ⭐</p>
-  <p>Frame: {{ product.metafields.custom.frame | default: 'N/A' }}</p>
-  <p>Suspension: {{ product.metafields.custom.suspension | default: 'N/A' }}</p>
-  <p>Brake: {{ product.metafields.custom.brake | default: 'N/A' }}</p>
-  <p>Gears: {{ product.metafields.custom.gears | default: 'N/A' }}</p>
+  <p>Rating: {{ product.metafields.bikes.rating.value | default: 'N/A' }} ⭐</p>
+  <p>Frame: {{ product.metafields.bikes.frame.value | default: 'N/A' }}</p>
+  <p>Suspension: {{ product.metafields.bikes.suspension.value | default: 'N/A' }}</p>
+  <p>Brake: {{ product.metafields.bikes.brake.value | default: 'N/A' }}</p>
+  <p>Gears: {{ product.metafields.bikes.gears.value | default: 'N/A' }}</p>
   <p><a class="link--text" href="{{ product.url }}">More Details</a></p>
 </div>
 
